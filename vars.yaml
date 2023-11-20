@@ -1,0 +1,13 @@
+---
+
+- hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+  vars: 
+    pkgname: samba
+  
+  tasks:
+   - name: Install httpd server
+     action: yum name='{{pkgname}}' state=installed 
+

@@ -1,0 +1,9 @@
+---
+- hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+
+  tasks: 
+  - name: install httpd on linux
+    action: yum name=httpd state=installed
